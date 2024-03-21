@@ -19,5 +19,4 @@ async function notifyExtension(e) {
       }
     }
   }
-
 }

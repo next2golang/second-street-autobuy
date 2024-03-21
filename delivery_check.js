@@ -4,8 +4,8 @@ window.onload = async function () {
     console.log("response.state", response, finalCheckButton);
     if (response.status === false) {
         console.log("response.state === false", response);
-        // if (finalCheckButton) {
-        //     finalCheckButton.click();
-        // }
+        if (finalCheckButton) {
+            finalCheckButton.click();
+        }
     }
 };
