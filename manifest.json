@@ -1,0 +1,42 @@
+{
+  "name": "2nd STREET 自動購入",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "商品詳細へのアクセスをトリガーに自動購入します。",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "2nd STREET 自動購入",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.2ndstreet.jp/**"],
+      "js": ["main.js"]
+    },
+    {
+      "matches": ["https://www.2ndstreet.jp/cart/empty"],
+      "js": ["empty_cart.js"]
+    },
+    {
+      "matches": ["https://www.2ndstreet.jp/delivery"],
+      "js": ["delivery_check.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "runtime"
+  ]
+}

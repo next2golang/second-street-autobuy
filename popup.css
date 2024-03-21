@@ -1,0 +1,27 @@
+
+body {
+    width: 200px;
+    height: 150px;
+    background-color: #1b1b1f;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    height: 40px;
+    width: 170px;
+    background-color: #26b81c;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: white;
+}
